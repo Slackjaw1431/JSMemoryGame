@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Memory Game</title>
+    <script async src = "memoryGame.js"></script>
+    <style media="screen">
+      h1{
+        align: center;
+      }
+      form {
+        width:330px;
+        margin:20px;
+        background-color:skyblue;
+        padding:20px;
+      }
+      input {
+         text-align:right;
+      }
+    </style>
+  </head>
+    <h1>Memory Card Game</h1>
+    <body onLoad="init();">
+      <h2>Memory - by Bryson Payne</h2>
+    <canvas id="canvas" width="900" height="400">
+    Your browser doesn't support the HTML5 element canvas.
+    </canvas>
+    <br/>
+    Click on two cards to see if you have a match.
+     Timer: <span id="myTimer"> 0.0 </span>
+    <form name="f" >
+    Number of matches:  <input type="text" name="count" value="0" size="1" id="matches"/>
+    <p>
+    Time taken to complete puzzle: <input type="text" name="elapsed" value="  " size="4" id="time"/> seconds.
+    </p>
+    Enter your initials for high scoring: <input type="text" name="initials" value="  " size="4" id="initials"/>
+    <input type="button" value="Submit High Score" onclick="scoresRecord()"/>
+    </form>
+    <div id="scores" onload="printScores()">
+
+    </div>
+    </body>
+</html>
